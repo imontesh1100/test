@@ -30,7 +30,7 @@ window.fbAsyncInit = () => {
 			getUserData();
 		} else {
 			//user is not authorized
-			console.log('USER NO AUTORIZO');
+			//console.log('USER NO AUTORIZO');
 		}
 	});
 };
@@ -46,6 +46,7 @@ window.fbAsyncInit = () => {
 document.getElementById('loginBtn').addEventListener('click', () => {
 	//do the login
 	FB.login((response) => {
+		console.log(response);
 		if (response.authResponse) {
 			//user just authorized your app
 			document.getElementById('loginBtn').style.display = 'none';
