@@ -5,6 +5,8 @@
 <meta charset="UTF-8">
 </head>
 <body>
+  <button id="loginBtn">Facebook Login</button>
+  <div id="response"></div>
   <script>
   function getUserData() {
 	FB.api('/me', {fields: 'name,email'}, (response) => {
@@ -52,8 +54,5 @@ document.getElementById('loginBtn').addEventListener('click', () => {
 	}, {scope: 'email,public_profile', return_scopes: true});
 }, false);
   </script>
-  <button id="loginBtn">Facebook Login</button>
-  <div id="response"></div>
-
 </body>
 </html>
